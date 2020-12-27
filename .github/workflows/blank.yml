@@ -8,7 +8,7 @@ name: chatbot_exe
 # github actionsのcronの時刻はUTCなので、日本時間に合わせるために日本時刻から9時間マイナスで設定する必要がある。
 on:
   schedule:
-    - cron: '30 19 * * 1,2,3,4,5,6'
+    - cron: "40 19 * * 1,2,3,4,5,6"
 
 jobs:
   build:
@@ -33,4 +33,3 @@ jobs:
         run: |
           # main.pyの実行
           python main.py
- 
