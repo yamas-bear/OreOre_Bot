@@ -1,5 +1,5 @@
 # ワークフロー名
-name: test_chatbot
+name: chatbot_exe
 
 # 発火タイミング
 # 日本時刻の朝7時に定期処理(分 時 日 月 曜日)
@@ -8,7 +8,7 @@ name: test_chatbot
 # 実はgithub actionsのcronの時刻はUTCなので、日本時間に合わせるために日本時刻から9時間マイナスで設定する必要があります。
 on:
   schedule:
-    - cron: '0 22 * * *'
+    - cron: '0 23 * * 1,2,3,4,5'
 
 jobs:
   build:
@@ -34,37 +34,3 @@ jobs:
           # main.pyの実行
           python main.py
 
-```
-
-
-```yml
-# ワークフロー名
-name: test_chatbot
-
-# 発火タイミング
-on:
-  schedule:
-    - cron: '0 23 * * *'
-
-jobs:
-  build:
-    # Ubuntuの最新版環境内で処理
-    runs-on: ubuntu-latest
-
-    # 実行する処理＆コマンド指定
-    steps:
-      - uses: actions/checkout@v2
-      - name: Set up Python 3.8
-        uses: actions/setup-python@v1
-        with:
-          python-version: 3.8
-      - name: Install dependencies
-        run: |
-          # pip更新
-          python -m pip install --upgrade pip
-          # 必要なパッケージインストール
-          pip install line-bot-sdk
-      - name: Run script
-        run: |
-          # main.pyの実行
-          python main.py
