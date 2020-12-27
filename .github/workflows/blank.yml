@@ -9,7 +9,7 @@ name: chatbot_exe
 on:
   # push:
   schedule:
-    - cron: "* * * * *"
+    - cron: "42 20 * * SUN-THU"
 
 jobs:
   build:
