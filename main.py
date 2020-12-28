@@ -1,4 +1,5 @@
 import json
+import requests
 from linebot import LineBotApi
 from linebot.models import TextSendMessage
 
