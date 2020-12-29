@@ -10,7 +10,7 @@ CHANNEL_ACCESS_TOKEN = info['CHANNEL_ACCESS_TOKEN']
 line_bot_api = LineBotApi(CHANNEL_ACCESS_TOKEN)
 
 data = requests.get('https://note.com/api/v2/notes')
-data_number = random.randint(0,20)
+data_number = random.randint(0,19)
 name = data.json()['data']['contents'][data_number]['name']
 username = data.json()['data']['contents'][data_number]['user']['name']
 urlname = data.json()['data']['contents'][data_number]['user']['urlname']
