@@ -1,7 +1,11 @@
 import json
 import requests
+import random
 from linebot import LineBotApi
 from linebot.models import TextSendMessage
+
+#qiitaユーザー認証に必要
+h = {'Authorization':'Bearer d15b3560f9902f4add98b127e57c5410da8869f5'}
 
 file = open('info.json','r')
 info = json.load(file)
