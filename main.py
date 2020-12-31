@@ -1,7 +1,7 @@
 import json
 import requests
 import random
-import qiita.py
+import qiita
 from linebot import LineBotApi
 from linebot.models import TextSendMessage
 
