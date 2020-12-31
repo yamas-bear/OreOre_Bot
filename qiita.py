@@ -7,8 +7,8 @@ def get_qiita_trend_data():
     res = requests.get(url)
     soup = BeautifulSoup(res.text,"html.parser")
     data = soup.find(class_="css-81mxb5")
-    data = a.find('h2')
-    data = a.find('a')
+    data = data.find('h2')
+    data = data.find('a')
     #記事のタイトル取得
     title = data.string
     #記事のurlを取得
