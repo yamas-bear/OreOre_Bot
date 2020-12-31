@@ -1,6 +1,6 @@
 from bs4 import BeautifulSoup
 
-def get_qiita_trend_data:
+def get_qiita_trend_data():
     url = 'https://qiita.com/'
     res = requests.get(url)
     soup = BeautifulSoup(res.text,"html.parser")
