@@ -30,7 +30,7 @@ qiita_url = qiita_data[1]
 def main():
     USER_ID = info['USER_ID']
 #     messages = TextSendMessage(text="おっはモーニング\nもう無理限界。\n牛丼の出汁がきいたあの香りにつられて吉野屋に来た。")
-    messages = TextSendMessage(text="おっはモーニング\n今日のオススメ記事だよ。\n「{}-{}」\nhttps://note.com/{}/n/{}\n「{}」\n{}".format(name,username,urlname,key,qiita_title,qiita_url))
+    messages = TextSendMessage(text="おっはモーニング\n今日のオススメ記事だよ。\n「{}-{}」\nhttps://note.com/{}/n/{}\n\n「{}」\n{}".format(name,username,urlname,key,qiita_title,qiita_url))
     line_bot_api.push_message(USER_ID,messages=messages)
 
 if __name__ == "__main__":
