@@ -2,6 +2,7 @@ import json
 import requests
 import random
 import qiita.py
+from bs4 import BeautifulSoup
 from linebot import LineBotApi
 from linebot.models import TextSendMessage
 
