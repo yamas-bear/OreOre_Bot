@@ -23,7 +23,7 @@ urlname = data['user']['urlname']
 key = data['key']
 
 #qiitaのデータを取得
-qiita_data = get_qiita_trend_data()
+qiita_data = qiita.get_qiita_trend_data()
 qiita_title = qiita_data[0]
 qiita_url = qiita_data[1]
 
